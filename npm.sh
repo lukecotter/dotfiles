@@ -8,3 +8,4 @@
 echo "Downloading npm clis"
 npm i -g sfdx-cli
 npm i -g local-web-server
+npm i -g vsce
