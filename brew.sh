@@ -77,8 +77,11 @@ brew install tree
 # brew install vbindiff
 # brew install zopfli
 brew install node
-brew install java11
-brew install openjdk@11
+brew install fnm
+brew install adoptopenjdk
+brew install adoptopenjdk8
+brew install adoptopenjdk11
+brew install adoptopenjdk14
 # brew install simplehttp2server
 brew install pmd
 brew install thefuck
@@ -90,7 +93,8 @@ brew install jq
 ## Apps I use
 brew tap Homebrew/cask-versions
 
-brew cask install 1password
+# brew cask install 1password
+brew cask install lastpass
 brew cask install alfred
 # brew cask install beamer # Stream to apple tv + chromecast
 # brew cask install dash
@@ -99,11 +103,11 @@ brew cask install microsoft-edge-dev # Weekly
 brew cask install firefox-nightly # Nightly
 brew cask install firefox-developer-edition # dev edition
 # brew cask install google-chrome # Chrome
-brew cask install google-chrome-beta # Chrome beta
+brew cask install google-chrome-dev # Chrome dev
 brew cask install google-chrome-canary # Chrome Canary
 # brew cask install grammarly
 brew cask install iterm2 # replace terminal 
-brew cask install kap # Screen capture - https://getkap.co/
+# brew cask install kap # Screen capture - https://getkap.co/
 # brew cask install keycastr # open-source keystroke visualizer - https://github.com/keycastr/keycastr
 # brew cask install mongodb-compass
 # brew cask install notion
@@ -112,21 +116,22 @@ brew cask install kap # Screen capture - https://getkap.co/
 # brew cask install skype
 brew cask install slack
 brew cask install spotify
-brew cask install textexpander
+# brew cask install textexpander
 # brew cask install tower
 # brew cask install wechat
 # hide menu bar icons (similar to bartender and vanilla) - https://github.com/Mortennn/Dozer
-brew cask install dozer 
+brew cask install dozer
+brew cask install rectangle 
 brew cask install Amphetamine # keep mac awake - https://apps.apple.com/app/amphetamine/id937984704
 brew cask install flux # Better nightshift - https://justgetflux.com/
-brew cask install diffmerge p4v meld  # difftool - kdiff3, p4merge, meld
+brew cask install diffmerge # p4v meld difftool - kdiff3, p4merge, meld
 # brew cask install trello # 
-brew cask install twitter #
+# brew cask install twitter #
 brew cask install vlc #
 
-brew cask install visual-studio-code-insiders #
-brew cask install intellij-idea-ce
-brew cask install fork
+brew cask install visual-studio-code-insiders \
+intellij-idea-ce \
+fork \
 
 brew cask install font-firacode-nerd-font
 brew cask install java
