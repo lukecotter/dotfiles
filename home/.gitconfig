@@ -1,0 +1,22 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+[alias]
+	compare = log --left-right --graph --cherry-pick --oneline
+	unmerged = cherry -v
+	brename = "!f() { git branch -m $1 $2 && git push origin :$1 $2 && git push origin -u $2; }; f"
+	bdd = "!f() { git branch | grep $1; }; f"
+	bd = "!f() { git branch | grep $1 | xargs git branch -d; }; f"
+	dmbd = "!f() { git branch -vv |  grep 'origin/.*: gone]' | awk '{print $1}'; }; f"
+	dmb = "!f() { git branch -vv |  grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D; }; f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
