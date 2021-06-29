@@ -44,3 +44,15 @@ update(){
   echo "Updating global npm packages"
   npm update -g
 }
+
+
+  fnm:upgrade(){
+    CURRENTPACKAGES=$(npm ls -g | cut -d "@" -f1 | cut -d " " -f2 | tail -n +2 | tr "\n" " " | awk '{$1=$1};1')
+
+    LATESTNODE=$(fnm ls-remote | cut -d "." -f1 | cut -d "v" -f2 | tail -1)
+    echo "Installing node v$LATESTNODE"
+    fnm install $LATESTNODE
+    fnm default $LATESTNODE
+
+    npm i -g $CURRENTPACKAGES
+  }
