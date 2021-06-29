@@ -71,8 +71,8 @@ source $ZSH/oh-my-zsh.sh
 
 export SFDX_DISABLE_SOURCE_MEMBER_POLLING=true
 export SFDX_MAX_QUERY_LIMIT=30000
-# ulimit -n 65536 65536
-SFDX_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/sfdx/autocomplete/zsh_setup && test -f $SFDX_AC_ZSH_SETUP_PATH && source $SFDX_AC_ZSH_SETUP_PATH;
+ulimit -f unlimited
+SFDX_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/sfdx/autocomplete/zsh_setup && test -f $SFDX_AC_ZSH_SETUP_PATH && source $SFDX_AC_ZSH_SETUP_PATH; # sfdx autocomplete setup
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
