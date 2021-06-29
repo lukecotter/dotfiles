@@ -5,4 +5,4 @@
 ./zsh.sh
 ./npm.sh
 ./setup-symlinks.sh
-./macos
+./.macos 
