@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+# #!/usr/bin/env bash
 
 # xcode-select -install
 # Install command-line tools using Homebrew.
 
 # Install Homebrew (if not installed)
 echo "Installing Homebrew."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -38,8 +38,8 @@ brew install gnu-sed
 #   chsh -s "${BREW_PREFIX}/bin/bash";
 # fi;
 
-# Install `wget` with IRI support.
-brew install wget --with-iri # Internet file retriever
+# Install `wget` 
+brew install wget # Internet file retriever
 
 # Install GnuPG to enable PGP-signing commits.
 # brew install gnupg
@@ -60,15 +60,15 @@ brew install grep
 # brew install woff2
 
 # Install other useful binaries.
-brew install ack
-#brew install exiv2
+# brew install ack
+# brew install exiv2
 brew install ant
 brew install git
 brew install git-lfs
 # brew install gs
 # brew install imagemagick --with-webp
-brew install p7zip
-brew install pigz
+# brew install p7zip
+# brew install pigz
 # brew install pv
 # brew install rename
 # brew install rlwraps
@@ -76,80 +76,78 @@ brew install pigz
 brew install tree
 # brew install vbindiff
 # brew install zopfli
-brew install node
+# brew install node
 brew install fnm
+
+brew tap AdoptOpenJDK/openjdk
 brew install adoptopenjdk
-brew install adoptopenjdk8
+brew install adoptopenjdk/openjdk/adoptopenjdk8
 brew install adoptopenjdk11
 brew install adoptopenjdk14
 # brew install simplehttp2server
 brew install pmd
-brew install thefuck
+# brew install thefuck
 brew install the_silver_searcher
 brew install zsh
-brew install mas
 brew install jq
 
 ## Apps I use
-brew tap Homebrew/cask-versions
+# brew tap Homebrew/cask-versions
 
-# brew cask install 1password
-brew cask install lastpass
-brew cask install alfred
-# brew cask install beamer # Stream to apple tv + chromecast
-# brew cask install dash
-# brew cask install dropbox
-brew cask install microsoft-edge-dev # Weekly
-brew cask install firefox-nightly # Nightly
-brew cask install firefox-developer-edition # dev edition
-# brew cask install google-chrome # Chrome
-brew cask install google-chrome-dev # Chrome dev
-brew cask install google-chrome-canary # Chrome Canary
-# brew cask install grammarly
-brew cask install iterm2 # replace terminal 
-# brew cask install kap # Screen capture - https://getkap.co/
-# brew cask install keycastr # open-source keystroke visualizer - https://github.com/keycastr/keycastr
-# brew cask install mongodb-compass
-# brew cask install notion
-# brew cask install sketch # ui design - https://www.sketch.com/
-# brew cask install skitch
-# brew cask install skype
-brew cask install slack
-brew cask install spotify
-# brew cask install textexpander
-# brew cask install tower
-# brew cask install wechat
+# brew install 1password
+brew install lastpass
+brew install alfred
+# brew install beamer # Stream to apple tv + chromecast
+# brew install dash
+# brew install dropbox
+brew install microsoft-edge-dev # Weekly
+brew install firefox-nightly # Nightly
+brew install firefox-developer-edition # dev edition
+# brew install google-chrome # Chrome
+brew install google-chrome-dev # Chrome dev
+brew install google-chrome-canary # Chrome Canary
+# brew install grammarly
+brew install iterm2 # replace terminal 
+# brew install kap # Screen capture - https://getkap.co/
+# brew install keycastr # open-source keystroke visualizer - https://github.com/keycastr/keycastr
+# brew install mongodb-compass
+# brew install notion
+# brew install sketch # ui design - https://www.sketch.com/
+# brew install skitch
+# brew install skype
+brew install slack
+brew install spotify
+# brew install textexpander
+# brew install tower
+# brew install wechat
 # hide menu bar icons (similar to bartender and vanilla) - https://github.com/Mortennn/Dozer
-brew cask install dozer
-brew cask install rectangle 
-brew cask install Amphetamine # keep mac awake - https://apps.apple.com/app/amphetamine/id937984704
-brew cask install flux # Better nightshift - https://justgetflux.com/
-brew cask install diffmerge # p4v meld difftool - kdiff3, p4merge, meld
-# brew cask install trello # 
-# brew cask install twitter #
-brew cask install vlc #
+brew install dozer
+brew install rectangle 
+brew install flux # Better nightshift - https://justgetflux.com/
+brew install diffmerge # p4v meld difftool - kdiff3, p4merge, meld
+# brew install trello # 
+# brew install twitter #
+brew install vlc #
 
-brew cask install visual-studio-code-insiders \
+brew install visual-studio-code-insiders \
 intellij-idea-ce \
 fork \
 
-brew cask install font-firacode-nerd-font
-brew cask install java
+brew tap homebrew/cask-fonts
+brew install font-fira-code-nerd-font
+# brew install java
 
-brew cask install \
-qlcolorcode \ # Preview source code files with syntax highlighting
-qlstephen \ # Preview plain text files without a file extension. Example: README, CHANGELOG, etc.
-qlmarkdown \ # Preview Markdown files
-quicklook-json \ # Preview JSON files
-quicklook-csv \ # Preview CSV files
-qlimagesize \ # Display image size and resolution
-suspicious-package \ # Preview the contents of a standard Apple installer package
-qlvideo \ # Preview most types of video files, as well as their thumbnails, cover art and metadata
-betterzipql \ # Preview archives
-webpquicklook \ # Preview WebP images
-# provisionql \ # Preview iOS / OS X app and provision information
-# quicklookap #  Preview Android APK files
-# quicklookase \ # Preview ASE files (Adobe Swatch Exchange)
+brew install qlstephen \
+qlmarkdown \
+quicklook-json \
+quicklook-csv \
+qlimagesize \
+suspicious-package \
+qlvideo \
+betterzip \
+
+brew install mas # to install apps from mac app store from cli.
+mas install 937984704 # (Amphetamine) keep mac awake - https://apps.apple.com/app/amphetamine/id937984704
 
 # Remove outdated versions from the cellar.
 brew cleanup
