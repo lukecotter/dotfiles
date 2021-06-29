@@ -2,5 +2,5 @@
 
 for location in $(find home -name '.*'); do
   file="${location##*/}"
-  ln -fs "$dotfiles/$location" "$HOME/$file"
+  ln -fs "$PWD/$location" "$HOME/$file"
 done
