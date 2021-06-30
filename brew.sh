@@ -137,7 +137,7 @@ brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
 # brew install java
 
-brew install qlstephen \
+brew install
 qlmarkdown \
 quicklook-json \
 quicklook-csv \
