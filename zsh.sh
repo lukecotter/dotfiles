@@ -11,4 +11,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 mkdir -p ~/.oh-my-zsh/custom/plugins/aliases
 ln -fs $PWD/zsh/aliases.plugin.zsh ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh
-de
